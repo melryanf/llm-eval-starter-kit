@@ -1,0 +1,21 @@
+# Local project checkpoint; not part of the tester download.
+/PROGRESS.md
+
+# Local evaluation runs. Keep the blank templates in the published kit.
+/*/results/*
+!/*/results/TEMPLATE.md
+submission/
+
+# Python-generated files and local environments.
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Local editor and operating-system files.
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Keep model inputs and all evaluator materials tracked: testers need them.
