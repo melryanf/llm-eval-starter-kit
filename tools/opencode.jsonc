@@ -1,0 +1,13 @@
+{
+  // Chat-baseline agent for tools/run_eval.py: short system prompt, no tools.
+  "$schema": "https://opencode.ai/config.json",
+  "agent": {
+    "eval": {
+      "mode": "primary",
+      "description": "Plain chat baseline: no tools",
+      "prompt": "You are a helpful assistant.",
+      "tools": { "*": false },
+      "permission": { "*": "deny" }
+    }
+  }
+}

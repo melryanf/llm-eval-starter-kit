@@ -30,7 +30,10 @@ Use 1/0 per check, N/A for unused rounds. Do not score an infrastructure failure
 
 - Final fully passed (all 8):
 - Correction rounds used (0–2):
-- Optional elapsed time / cost:
+- Time per round (seconds):
+- Tokens per round (input / output / reasoning):
+- Cost (USD, or N/A for free/local):
+- Output tokens per second:
 - Extraction issues: <!-- if ambiguous/missing code required scoring an empty file -->
 - Evidence: <!-- links to each response, candidate, checker output, and feedback -->
 - Protocol deviations: <!-- any manual changes invalidate direct comparison -->

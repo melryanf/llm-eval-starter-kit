@@ -48,6 +48,23 @@ python3 text-stats-cli/evaluator/verify.py
 python3 text-stats-cli/evaluator/check.py text-stats-cli/evaluator/reference.py
 ```
 
+## Automated runs (optional)
+
+`tools/run_eval.py` runs a pilot against models through the [opencode](https://opencode.ai)
+CLI, with fresh sessions and repeats, and writes the same run records as a manual run:
+
+```sh
+python3 tools/run_eval.py text-stats-cli --models-file tools/models.txt --repeats 5
+python3 tools/summarize.py     # Markdown table per experiment version
+```
+
+- `text-stats-cli` is scored with `evaluator/check.py` and gets the standard feedback rounds.
+  `meeting-action-items` saves `initial.md` for manual scoring.
+- Runs use an opencode agent with tools disabled and a one-line system prompt, from an empty
+  directory. That is a different setup group from pasted-chat runs; the record says so.
+- Each call has a hard timeout (`--timeout`); a failed call is retried once, then the run is `incomplete`.
+- Generated code executes on your machine: use a disposable environment.
+
 ## Follow-on experiments
 
 After the pilots validate the format:
